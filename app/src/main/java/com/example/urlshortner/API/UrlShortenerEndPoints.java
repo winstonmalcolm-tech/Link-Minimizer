@@ -18,7 +18,7 @@ public interface UrlShortenerEndPoints {
     @FormUrlEncoded
     @Headers({
             "content-type: application/x-www-form-urlencoded",
-            "X-RapidAPI-Key: 00f87291e3msh600076d5f663d37p11e2e0jsn1fdb2341ad96",
+            "X-RapidAPI-Key: ",
             "X-RapidAPI-Host: url-shortener-service.p.rapidapi.com",
     })
     @POST("shorten")
