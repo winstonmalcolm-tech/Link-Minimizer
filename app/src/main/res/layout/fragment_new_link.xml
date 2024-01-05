@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.NewLink">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_input"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:inputType="text"
+            android:hint="@string/title" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/url_input"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title_input"
+        android:layout_marginBottom="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:inputType="textUri"
+            android:hint="@string/paste_url" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <android.widget.Button
+        android:id="@+id/shorten_url_btn"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@drawable/btn_text_change"
+        android:text="@string/shorten"
+        android:layout_below="@id/url_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shorten_url_btn_txt_design"
+        style="@style/shorten_url_btn"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/url_input"
+        android:visibility="invisible"
+        android:layout_marginBottom="30dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/output_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shorten_url_btn"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/generated_link_output"
+        >
+
+        <TextView
+            android:id="@+id/title_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageButton
+            android:id="@+id/copy_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/copy_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@drawable/copy_btn_bg"
+            android:contentDescription="@string/copy_link"/>
+
+        <TextView
+            android:id="@+id/short_link_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorLink="@color/primary"
+            android:layout_below="@id/title_output"
+            android:textSize="18sp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/short_link_output"
+            android:textAllCaps="true"
+            android:text="@string/feedback"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

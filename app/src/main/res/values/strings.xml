@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Link Minimizer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="paste_url">Paste URL...</string>
+    <string name="shorten">Shorten</string>
+    <string name="title">Enter title</string>
+    <string name="copy_link">Copy link</string>
+    <string name="feedback">Here you go</string>
+</resources>

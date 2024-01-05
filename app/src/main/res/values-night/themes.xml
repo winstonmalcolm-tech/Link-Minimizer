@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.URLShortner" parent="Theme.Material3.Dark">
+        <!-- Customize your dark theme here. -->
+         <item name="colorPrimary">@color/nightmode_actionbar_bg</item>
+
+    </style>
+    <style name="tabbg">
+        <item name="android:backgroundTint">@color/nightmode_actionbar_bg</item>
+    </style>
+
+    <style name="selectedTextColor">
+        <item name="android:color">@color/white</item>
+    </style>
+
+    <style name="shorten_url_btn">
+        <item name="android:backgroundTint">@color/nightmode_actionbar_bg</item>
+    </style>
+</resources>

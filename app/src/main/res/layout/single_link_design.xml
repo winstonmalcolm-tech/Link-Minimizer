@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="10dp"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/single_title_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageButton
+        android:id="@+id/single_copy_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/copy_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@drawable/copy_btn_bg"
+        android:contentDescription="@string/copy_link"
+        />
+
+    <TextView
+        android:id="@+id/single_short_link_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorLink="@color/primary"
+        android:layout_below="@id/single_title_output"
+        android:textSize="18sp"
+        android:layout_marginBottom="15dp"/>
+
+</RelativeLayout>
